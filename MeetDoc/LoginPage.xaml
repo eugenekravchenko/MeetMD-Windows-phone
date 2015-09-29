@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="MeetDoc.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MeetDoc"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White">
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="350*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Source="Assets/Picture/Рисунок1.gif" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="None" Margin="0"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="100*"/>
+                <RowDefinition Height="100*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Foreground="#FFFF1400" Text="Insurance Number" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Segoe UI Light" FontSize="32" FontWeight="Light"/>
+            <TextBox InputScope="Number" Grid.Row="1" HorizontalAlignment="Center"  VerticalAlignment="Center" BorderBrush="#FFFF1400" Text="" Width="400" Height="50" MinWidth="400" MinHeight="50" Padding="10,8,10,0" FontSize="21.333" SelectionHighlightColor="White" Background="White"/>
+            <TextBlock Grid.Row="2" Foreground="#FFFF1400" Text="Password" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Segoe UI Light" FontSize="32" FontWeight="Light"/>
+            <PasswordBox Grid.Row="3"  SelectionHighlightColor="White"  Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFFF1400" Width="400" Height="50" MinWidth="400" MinHeight="50" Padding="10,8,10,0" FontSize="21.333" PasswordChar="*"/>
+            <HyperlinkButton Grid.Row="4" Background="White" Content="Forgot your password?" Width="292" Foreground="#FF1D47D3" BorderBrush="#FFF50505" Click="HyperlinkButton_Click"/>
+            <Button Grid.Row="5" Background="#FFFD0000" HorizontalAlignment="Right" VerticalAlignment="Center" Click="Button_Click" Content="Login" BorderBrush="White" Foreground="White" Width="150" Height="75" MinWidth="100" MinHeight="60" FontSize="21.333" FontWeight="Normal"/>
+        
+        </Grid>
+        
+        
+    </Grid>
+</Page>
